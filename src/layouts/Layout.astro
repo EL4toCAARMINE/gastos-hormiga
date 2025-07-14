@@ -1,3 +1,7 @@
+---
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +9,27 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Catalogo Gastos Pendejos Steam</title>
 	</head>
 	<body>
-		<slot />
+		<div class="container">
+			<!-- Comportamiento similar al uso de children encapsula componentes que se le pasen -->
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style>
+	/* llamando una dependencia para poder usar tailwind tambien se puede llamar a un archivo que ya tenga referencia a tailwind */
+	@reference "tailwindcss";
+
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		@apply grid place-content-center p-5;
+		background-color: #000;
+
+		.container {
+			@apply container;
+		}
 	}
 </style>

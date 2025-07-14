@@ -1,11 +1,45 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import About from '../components/Card.astro';
+// importante es llamar tailwind aqui desde el css 
+import "../styles/global.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { getCollection } from 'astro:content';
+
+const games = await getCollection('games');
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<h1 class="text-white text-center text-6xl font-extrabold mb-20">Gastos <span class="bg-gradient-to-r from-purple-500 via-pink-400 to-white">Pendejos</span> En Steam</h1>
+
+		<section aria-label="Pero como son juegazos no me arrepiento">
+			<div class="px-4 mx-auto max-w-screen-xl">
+				<div class="grid gap-6 md:grid-cols-2">
+					{
+						games.map(game=>{
+							const {slug, data, body} = game;
+							const {genero, personajes, modo, escenarios, controles, actualizaciones, lanzamiento, img, plataforma, title, url} = data;
+
+							return (
+								<article>
+									<a href={`/juego/${slug}`} target="_blank" class="mb-2 xl:mb-0 transition hover:scale-110 overflow-hidden">
+										<img src={`/${img}`} alt={slug} class="h-200 w-full rounded-lg object-cover"/>
+									</a>
+									<h3 class="text-white">{title}</h3>
+								</article>
+							)
+						})
+					}
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	span{
+		-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+	}
+</style>
