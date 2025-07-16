@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+
+// Definiendfo rutas dinamicas para poder acceder a cada pamtalla
+export async function getStaticPaths() {
+    const games = getCollection("games");
+
+    // Se define el titulo de la pagina y el contenido como props
+    return (await games).map((game) => ({
+        params: { id: game.slug },
+        props: { game },
+    }));
+}
+
+// obtenemos los datos que se recbieron desde la coleccion indicada
+const { game } = Astro.props;
+// destructuramos el contenido del markdown
+const { data } = game;
+const { genero, personajes, modo, escenarios, controles, actualizaciones, lanzamiento, img, plataforma, title, url } = data;
+---
+
+<Layout title={`${title}`}>
+    <h1 
+        class="text-center text-6xl font-extrabold mb-20"
+        style={`background-image: url(/${img}); background-repeat: no-repeat; background-size: cover; background-position: center;`}
+    >
+        {title}
+    </h1>
+</Layout>
+
+<style>
+    h1 {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        -webkit-text-stroke: .0001px #fff;
+        filter: drop-shadow(0 0 15px #ffffff);
+    }
+</style>
