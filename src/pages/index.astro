@@ -24,12 +24,12 @@ const games = await getCollection('games');
 							return (
 								<article class="flex">
 									<a href={`/juego/${slug}`} class="mb-2 xl:mb-0 transition-all delay-150 duration-300 ease inline-block hover:scale-110 overflow-hidden w-50 h-75 mr-10 rounded-lg image-container">
-										<img src={`/${img}`} alt={slug} class="w-full object-cover h-full"/💸>
+										<img src={`/${img}`} alt={slug} class="w-full object-cover h-full"/>
 									</a>
 									<div class="flex flex-col justify-center">
 										<h2 class="mb-2 text-2xl font-bold leading-tight text-white">{title}</h2>
 
-										<p class="mb-4 text-gray-300 max-w-sm">{genero}</p>
+										<p class="mb-4 text-gray-300 max-w-sm capitalize">{genero}</p>
 										<span class="text-xs">{plataforma}</span>
 									</div>
 								</article>

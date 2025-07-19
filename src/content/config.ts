@@ -12,8 +12,10 @@ const games = defineCollection({
         controles: z.string(),
         actualizaciones: z.string(),
         lanzamiento: z.string(),
+        portadaImg: z.string(),
         img: z.string(),
-        url: z.string().url()
+        url: z.string().url(),
+        logo: z.string()
     })
 })
 

@@ -1,5 +1,5 @@
 ---
-title: "The Witcher 3: Wild Hunt 🐺"
+title: "The Witcher 3: Wild Hunt"
 genero: RPG de mundo abierto  
 plataforma: PS4, Xbox One, Nintendo Switch, PC, PS5, Xbox Series X/S  
 personajes: Geralt de Rivia, Yennefer, Ciri, Triss, y más  
@@ -9,7 +9,9 @@ controles: combate dinámico con espadas, magia, pociones
 actualizaciones: expansiones “Hearts of Stone” y “Blood and Wine”, múltiples parches  
 lanzamiento: mayo 2015 
 img: tw3.png
+portadaImg: tw3.webp
 url: https://www.smashbros.com/es_ES/
+logo: tw3-logo.png
 ---
 
 The Witcher 3 es un RPG épico de mundo abierto que sigue las aventuras de Geralt de Rivia, un cazador de monstruos en un universo oscuro y lleno de intrigas políticas. Con una historia profunda, personajes memorables y un mundo vibrante y detallado, es uno de los títulos más aclamados de la generación pasada.
