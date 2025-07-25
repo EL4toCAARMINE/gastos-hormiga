@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import About from "../components/Card.astro";
+
 // importante es llamar tailwind aqui desde el css
 import "../styles/global.css";
 
 import { getCollection } from "astro:content";
 
 const games = await getCollection("games");
+
+// Indica que sera una pagina estatica
+export const prerender = true;
 ---
 
 <Layout title="Catalogo Gastos Pendejos">

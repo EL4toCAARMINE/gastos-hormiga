@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 // Variable de entorno desde el server
 import { SHOW_SEE_MORE_BUTTON } from "astro:env/server";
 import Layout from "../../layouts/Layout.astro";
+import GameScore from "../../components/GameScore.astro";
 import "../../styles/global.css";
 
 // Definiendfo rutas dinamicas para poder acceder a cada pamtalla
@@ -37,6 +38,9 @@ const {
 } = data;
 
 const content = game.body;
+
+// Indica que sera una pagina estatica
+export const prerender = true;
 ---
 
 <Layout title={`${title}`}>
@@ -82,7 +86,10 @@ const content = game.body;
                 Lanzamieto: {lanzamiento}
             </h2>
 
-            <span class="text-xs text-white font-semibold" id="score"></span>
+            <GameScore server:defer id={slug}>
+                <!-- CARGA ALGO MIENTRAS EL SERVER ISLAND CARGA IMPORTABTE EL FALLBACK -->
+                <span slot="fallback" class="text-xs text-white font-semibold">Cargando puntuación...</span>
+            </GameScore>
 
             <div
                 class="content-description flex flex-row justify-between gap-10 mt-10"
@@ -263,20 +270,3 @@ const content = game.body;
         }
     }
 </style>
-
-<script>
-    // Variable de entorno desde el cliente
-    import { RANDOM_NUMBER } from "astro:env/client";
-
-    const scoreElement = document.querySelector("#score");
-
-    fetch(RANDOM_NUMBER)
-        .then((res) => res.text())
-        .then((scoreValue) => {
-            if (scoreElement) {
-                console.log(scoreValue);
-
-                scoreElement.innerHTML = `⭐Gasto ${scoreValue} de 10 👌`;
-            }
-        });
-</script>

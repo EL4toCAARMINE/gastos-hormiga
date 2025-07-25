@@ -1,0 +1,12 @@
+---
+//  ISLA DE SERVIDOR YA QUE SI NO SE COSNULTARA UNA VEZ LA API PLASMA 
+//  EL DATO Y NO CAMBIARA HASTA VOLVER A SUBIR UNA BUILD
+import { RANDOM_NUMBER } from "astro:env/server";
+
+const res = await fetch(RANDOM_NUMBER);
+const scoreValue = await res.text();
+---
+
+<span class="text-xs text-white font-semibold" id="score">
+	⭐Gasto {scoreValue.trim()} de 10 👌
+</span>
