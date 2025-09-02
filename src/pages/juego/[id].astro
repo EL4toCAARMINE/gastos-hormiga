@@ -87,7 +87,7 @@ export const prerender = true;
             </h2>
 
             <GameScore server:defer id={slug}>
-                <!-- CARGA ALGO MIENTRAS EL SERVER ISLAND CARGA IMPORTABTE EL FALLBACK -->
+                <!-- CARGA UN LOADER MIENTRAS EL SERVER ISLAND CARGA, IMPORTANTE EL FALLBACK -->
                 <span slot="fallback" class="text-xs text-white font-semibold">Cargando puntuación...</span>
             </GameScore>
 
