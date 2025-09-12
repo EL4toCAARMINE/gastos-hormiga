@@ -41,6 +41,7 @@ const content = game.body;
 
 // Indica que sera una pagina estatica
 export const prerender = true;
+
 ---
 
 <Layout title={`${title}`}>
@@ -65,6 +66,7 @@ export const prerender = true;
                     src={`/${img}`}
                     alt={slug}
                     class="w-full h-full object-cover rounded-lg"
+                    transition:name={`image-${slug}`}
                 />
             </a>
             <img
