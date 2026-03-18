@@ -24,6 +24,6 @@ export default defineConfig({
     mode: 'standalone'
   }),
 
-  site: 'https://<el4tocaarmine>.github.io', 
-  base: '/<gastos-hormiga>',
+  site: 'https://el4tocaarmine.github.io', 
+  base: '/gastos-hormiga',
 });
