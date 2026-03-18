@@ -22,5 +22,8 @@ export default defineConfig({
 
   adapter: node({
     mode: 'standalone'
-  })
+  }),
+
+  site: 'https://<EL4toCAARMINE>.github.io', 
+  base: '/<gastos-hormiga>',
 });
