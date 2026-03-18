@@ -31,3 +31,5 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           package-manager: yarn
+          build-command: yarn build
+          build-directory: dist
