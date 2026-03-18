@@ -20,7 +20,7 @@ const { title } = Astro.props;
 		<ClientRouter />
 	</head>
 	<body>
-		<div class="container">
+		<div class="containerPrincipal">
 			<!-- Comportamiento similar al uso de children encapsula componentes que se le pasen -->
 			<slot />
 		</div>
@@ -36,8 +36,8 @@ const { title } = Astro.props;
 		@apply grid place-content-center;
 		background-color: #000;
 
-		.container {
-			@apply container w-full;
+		.containerPrincipal {
+			@apply w-full;
 		}
 	}
 </style>
