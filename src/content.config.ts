@@ -1,7 +1,8 @@
 import { defineCollection, z } from "astro:content";
-// z => zod schema
+import { glob } from 'astro/loaders'; 
 
 const games = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/games" }),
     schema: z.object({
         title: z.string(),
         genero: z.string(),
@@ -19,4 +20,4 @@ const games = defineCollection({
     })
 })
 
-export const collections = { games }
+export const collections = { games };

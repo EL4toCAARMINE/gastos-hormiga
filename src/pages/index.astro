@@ -26,7 +26,7 @@ export const prerender = true;
 				<div class="grid gap-20 md:grid-cols-2">
 					{
 						games.map((game) => {
-							const { slug, data, body } = game;
+							const { id, data } = game;
 							const {
 								genero,
 								personajes,
@@ -44,15 +44,15 @@ export const prerender = true;
 							return (
 								<article class="flex z-0">
 									<a
-										href={`/juego/${slug}`}
+										href={`/juego/${id}`}
 										style={`background: url(/${img}); background-position: center; background-size: cover; background-repeat: no-repeat;`}
 										class="image-container"
 									>
 										<img
 											src={`/${img}`}
-											alt={slug}
+											alt={id}
 											class="w-full h-full object-cover rounded-lg"
-											transition:name={`image-${slug}`}
+											transition:name={`image-${id}`}
 										/>
 									</a>
 									<div class="flex flex-col justify-center">

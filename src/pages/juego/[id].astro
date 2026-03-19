@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
     // Se define el titulo de la pagina y el contenido como props
     return (await games).map((game) => ({
-        params: { id: game.slug },
+        params: { id: game.id },
         props: { game },
     }));
 }
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 // obtenemos los datos que se recbieron desde la coleccion indicada
 const { game } = Astro.props;
 // destructuramos el contenido del markdown
-const { data, slug } = game;
+const { data, id } = game;
 const {
     genero,
     personajes,
@@ -64,9 +64,9 @@ export const prerender = true;
             >
                 <img
                     src={`/${img}`}
-                    alt={slug}
+                    alt={id}
                     class="w-full h-full object-cover rounded-lg"
-                    transition:name={`image-${slug}`}
+                    transition:name={`image-${id}`}
                 />
             </a>
             <img
@@ -88,7 +88,7 @@ export const prerender = true;
                 Lanzamieto: {lanzamiento}
             </h2>
 
-            <GameScore server:defer id={slug}>
+            <GameScore server:defer id={id}>
                 <!-- CARGA UN LOADER MIENTRAS EL SERVER ISLAND CARGA, IMPORTANTE EL FALLBACK -->
                 <span slot="fallback" class="text-xs text-white font-semibold">Cargando puntuación...</span>
             </GameScore>
