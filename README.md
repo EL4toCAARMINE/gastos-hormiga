@@ -1,48 +1,48 @@
-# Astro Starter Kit: Basics
+# 🎮 Web de Mis "Gastos Hormiga" 🐜
 
-```sh
-yarn create astro@latest -- --template basics
+🚀 **[¡Míralo en vivo y pruébalo aquí!](https://gastos-hormiga-o8s3-ee27ushfu-el4tocaarmines-projects.vercel.app/)**
+
+<div align="center">
+  <img src="https://media.giphy.com/media/l41lFjGZZzB8nO6E0/giphy.gif" alt="Gaming gif" width="300"/>
+</div>
+
+Este proyecto es una **página web estática ultrarrápida** diseñada para mostrar una colección de juegos. Está construida con **Astro**, aprovechando su poder como generador de sitios estáticos (SSG) para entregar HTML puro y tiempos de carga mínimos, sin sacrificar la experiencia de desarrollo.
+
+## 🛠 Stack Tecnológico
+
+* **Framework:** Astro 🚀
+* **Estructura y Estilos:** HTML, CSS y JavaScript nativo
+* **Arquitectura:** Static Site Generation (SSG)
+* **Despliegue:** Vercel
+
+## 🚀 Cómo ejecutar el proyecto localmente
+
+Para clonar y explorar el código de este showcase de juegos en tu máquina, sigue estos pasos desde tu terminal:
+
+**1. Clonar el repositorio:**
+```bash
+git clone [https://github.com/EL4toCAARMINE/gastos-hormiga.git](https://github.com/EL4toCAARMINE/gastos-hormiga.git)
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**2. Acceder a la carpeta:**
+```bash
+cd gastos-hormiga
+```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**3. Instalar dependencias:**
+```bash
+npm install
+```
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+**4. Lanzar la aplicación:**
+```bash
+npm run dev
+```
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
+**5. Ver en el navegador:**
+Abre tu navegador web y visita la dirección local que te indique la terminal (por defecto en Astro es la siguiente):
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+http://localhost:4321
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> *Nota: Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu sistema.*
