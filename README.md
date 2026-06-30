@@ -11,7 +11,7 @@ Este proyecto es una **página web estática ultrarrápida** diseñada para most
 ## 🛠 Stack Tecnológico
 
 * **Framework:** Astro 🚀
-* **Estructura y Estilos:** HTML, CSS y JavaScript nativo
+* **Estructura y Estilos:** HTML, CSS, TailwindCSS y JavaScript
 * **Arquitectura:** Static Site Generation (SSG)
 * **Despliegue:** Vercel
 
