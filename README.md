@@ -6,6 +6,9 @@
   <img src="https://media.giphy.com/media/l41lFjGZZzB8nO6E0/giphy.gif" alt="Gaming gif" width="300"/>
 </div>
 
+<img width="1599" height="844" alt="image" src="https://github.com/user-attachments/assets/f1f861fd-287e-4c4d-b49a-0f619519c2f6" />
+<img width="1898" height="868" alt="image" src="https://github.com/user-attachments/assets/c9b806be-4500-4ea0-ba76-36520a6ab722" />
+
 Este proyecto es una **página web estática ultrarrápida** diseñada para mostrar una colección de juegos. Está construida con **Astro**, aprovechando su poder como generador de sitios estáticos (SSG) para entregar HTML puro y tiempos de carga mínimos, sin sacrificar la experiencia de desarrollo.
 
 ## 🛠 Stack Tecnológico
